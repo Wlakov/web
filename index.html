@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/public/style.css">
+
+    <title id="tit">PZ2.3</title>
+</head>
+<body>
+<div>
+    <input type="image" src="/public/img/images.png" alt="fir" class="first" id="f">
+    <input type="image" src="/public/img/photo_2021-09-27_13-10-33.jpg" alt="sec" class="second" id="s">
+    <input type="image" src="/public/img/загружено.jpg" alt="thi" class="third" id="t">
+    <script>
+        f.onclick=function (){
+            alert(document.getElementById("f").src)
+        }
+        s.onclick=function (){
+            alert(document.getElementById("s").src)
+        }
+        t.onclick=function (){
+            alert(document.getElementById("t").src)
+        }
+    </script>
+</div>
+<div id="links">
+    <p id="l1"><a id="h1" href="hdrezka.com" title=""></a>First</p>
+    <p id="l2"><a id="h2" href="google.com" title=""></a>Second</p>
+    <p id="l3"><a id="h3" href="netflix.com" title=""></a>Third</p>
+    <script>
+        let item = document.getElementById('l1');
+        item.addEventListener("mouseover", func, false);
+        item.addEventListener("mouseout", fu, false);
+        let item2= document.getElementById('l2');
+        item2.addEventListener("mouseover", func1, false);
+        item2.addEventListener("mouseout", fu, false);
+        let item3= document.getElementById('l3');
+        item3.addEventListener("mouseover", func2, false);
+        item3.addEventListener("mouseout", fu, false);
+        function func()
+        {
+            document.title=item.textContent
+        }
+        function func1()
+        {
+            document.title=item2.textContent
+        }
+        function func2()
+        {
+            document.title=item3.textContent
+        }
+
+        function fu()
+        {
+            document.title='pz2.3';
+        }
+
+
+       item.addEventListener("mouseover",f1,false)
+        function f1 () {
+            item.innerText+="(html)"
+            item.removeEventListener("mouseover",f1,false)
+        }
+        item2.addEventListener("mouseover",f2,false)
+        function f2()
+        {
+            item2.innerText+="(html)"
+            item2.removeEventListener("mouseover",f2,false)
+        }
+        item3.addEventListener("mouseover",f3,false)
+        function f3(){
+            item3.innerText+="(html)"
+            item3.removeEventListener("mouseover",f3,false)
+        }
+   </script>
+    <div>
+        <div id="inp">
+        <input type="text" value="first" id="field1">
+        <input type="text" value="second" id="field2">
+        <input type="text" value="third" id="field3">
+            <p id="demo">some random text</p>
+        </div>
+        <script>
+            let i1 = document.getElementById("field1");
+            let i2 = document.getElementById("field2");
+            let i3 = document.getElementById("field3");
+
+
+            function demo1(){
+                document.getElementById("demo").innerText=i1.value
+            }
+            function demo2(){
+                document.getElementById("demo").innerText=i2.value
+            }
+            function demo3(){
+                document.getElementById("demo").innerText=i3.value
+            }
+            i1.addEventListener("blur",demo1,false);
+            i2.addEventListener("blur",demo2,false);
+            i3.addEventListener("blur",demo3,false);
+
+
+            i1.addEventListener("click",alert1,false)
+            i2.addEventListener("click",alert2,false)
+            i3.addEventListener("click",alert3,false)
+            function alert1(){
+                alert(i1.value)
+                i1.removeEventListener("click",alert1,false)
+                i2.removeEventListener("click",alert2,false)
+                i3.removeEventListener("click",alert3,false)
+            }
+            function alert2(){
+                alert(i2.value)
+                i1.removeEventListener("click",alert1,false)
+                i2.removeEventListener("click",alert2,false)
+                i3.removeEventListener("click",alert3,false)
+            }
+            function alert3(){
+                alert(i3.value)
+                i1.removeEventListener("click",alert1,false)
+                i2.removeEventListener("click",alert2,false)
+                i3.removeEventListener("click",alert3,false)
+            }
+
+
+        </script>
+    </div>
+    <div>
+        <p id="two">2</p>
+        <p id="five">5</p>
+        <p id="seven">7</p>
+        <script>
+            document.getElementById("two").addEventListener("click",function (){
+                let int1=document.getElementById("two").textContent
+                document.getElementById("two").innerText=Math.pow(parseInt(int1), 2).toString()
+            })
+            document.getElementById("five").addEventListener("click",function (){
+                let int1=document.getElementById("five").textContent
+                document.getElementById("five").innerText=Math.pow(parseInt(int1), 2).toString()
+            })
+            document.getElementById("seven").addEventListener("click",function (){
+                let int1=document.getElementById("seven").textContent
+                document.getElementById("seven").innerText=Math.pow(parseInt(int1), 2).toString()
+            })
+        </script>
+    </div>
+    <div class="mx">
+        <input type="text" value="" id="text1" data-length="2">
+        <input type="text" value="" id="text2" data-length="5">
+        <input type="text" value="" id="text3" data-length="7">
+        <script>
+            let elem=document.getElementsByClassName("mx")
+
+            let elem1=document.getElementById('text1')
+            document.getElementById('text1').addEventListener('blur', function(){
+                let cor=elem1.dataset.length;
+                let now=elem1.value.length;
+                if(cor==now){
+                    elem1.style.borderColor='green';
+                }else{
+                    elem1.style.borderColor='red';
+                }
+            })
+            let elem2=document.getElementById('text2')
+            document.getElementById('text2').addEventListener('blur', function(){
+                let cor=elem2.dataset.length;
+                let now=elem2.value.length;
+                if(cor==now){
+                    elem2.style.borderColor='green';
+                }else{
+                    elem2.style.borderColor='red';
+                }
+            })
+            let elem3=document.getElementById('text3')
+            document.getElementById('text3').addEventListener('blur', function(){
+                let cor=elem3.dataset.length;
+                let now=elem3.value.length;
+                if(cor==now){
+                    elem3.style.borderColor='green';
+                }else{
+                    elem3.style.borderColor='red';
+                }
+            })
+
+        </script>
+    </div>
+
+    <div class="mydiv" id="mainChessBoard">
+        <script>
+            const table = document.createElement("table");
+
+            for (let i = 1; i < 9; i++) {
+                let tr = document.createElement('tr');
+                for (let j = 1; j < 9; j++) {
+                    let td = document.createElement('td');
+                    if (i%2 === j%2) {
+                        td.className = "white";
+                    } else {
+                        td.className = "black";
+                    }
+                    tr.appendChild(td);
+                }
+                table.appendChild(tr);
+            }
+            document.body.appendChild(table);
+        </script>
+    </div>
+</div>
+</body>
+</html>

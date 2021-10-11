@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="height: 50px"></div>
+<div style="height: 50px"></div>
+<div style="height: 50px"></div>
+<script>
+    let elems = document.getElementsByTagName('div');
+    for (let i = 0; i < elems.length; i++) {
+        elems[i].addEventListener('click', setRed);
+    }
+
+    function setRed() {
+        this.style.background = 'red';
+        this.removeEventListener('click', setRed);
+        this.addEventListener('click', setGreen);
+    }
+
+    function setGreen() {
+        this.style.background = 'green';
+        this.removeEventListener('click', setGreen);
+        this.addEventListener('click', setRed);
+    }
+</script>
+</body>
+</html>
