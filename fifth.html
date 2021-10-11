@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <p id="two">2</p>
+    <p id="five">5</p>
+    <p id="seven">7</p>
+    <script>
+        document.getElementById("two").addEventListener("click",function (){
+            let int1=document.getElementById("two").textContent
+            document.getElementById("two").innerText=Math.pow(parseInt(int1), 2).toString()
+        })
+        document.getElementById("five").addEventListener("click",function (){
+            let int1=document.getElementById("five").textContent
+            document.getElementById("five").innerText=Math.pow(parseInt(int1), 2).toString()
+        })
+        document.getElementById("seven").addEventListener("click",function (){
+            let int1=document.getElementById("seven").textContent
+            document.getElementById("seven").innerText=Math.pow(parseInt(int1), 2).toString()
+        })
+    </script>
+</div>
+</body>
+</html>

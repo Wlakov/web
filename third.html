@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <div id="inp">
+        <input type="text" value="first" id="field1">
+        <input type="text" value="second" id="field2">
+        <input type="text" value="third" id="field3">
+        <p id="demo"></p>
+    </div>
+    <script>
+        let i1 = document.getElementById("field1");
+        let i2 = document.getElementById("field2");
+        let i3 = document.getElementById("field3");
+
+
+        function demo1(){
+            document.getElementById("demo").innerText=i1.value
+        }
+        function demo2(){
+            document.getElementById("demo").innerText=i2.value
+        }
+        function demo3(){
+            document.getElementById("demo").innerText=i3.value
+        }
+        i1.addEventListener("blur",demo1,false);
+        i2.addEventListener("blur",demo2,false);
+        i3.addEventListener("blur",demo3,false);
+
+
+    </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="links">
+    <p id="l1"><a id="h1" href="hdrezka.com" title=""></a>First</p>
+    <p id="l2"><a id="h2" href="google.com" title=""></a>Second</p>
+    <p id="l3"><a id="h3" href="netflix.com" title=""></a>Third</p>
+    <script>
+        let item = document.getElementById('l1');
+        item.addEventListener("mouseover", func, false);
+        item.addEventListener("mouseout", fu, false);
+        let item2= document.getElementById('l2');
+        item2.addEventListener("mouseover", func1, false);
+        item2.addEventListener("mouseout", fu, false);
+        let item3= document.getElementById('l3');
+        item3.addEventListener("mouseover", func2, false);
+        item3.addEventListener("mouseout", fu, false);
+        function func()
+        {
+            document.title=item.textContent
+        }
+        function func1()
+        {
+            document.title=item2.textContent
+        }
+        function func2()
+        {
+            document.title=item3.textContent
+        }
+
+        function fu()
+        {
+            document.title='pz2.3';
+        }
+
+
+        item.addEventListener("mouseover",f1,false)
+        function f1 () {
+            item.innerText+="(html)"
+            item.removeEventListener("mouseover",f1,false)
+        }
+        item2.addEventListener("mouseover",f2,false)
+        function f2()
+        {
+            item2.innerText+="(html)"
+            item2.removeEventListener("mouseover",f2,false)
+        }
+        item3.addEventListener("mouseover",f3,false)
+        function f3(){
+            item3.innerText+="(html)"
+            item3.removeEventListener("mouseover",f3,false)
+        }
+    </script>
+</div>
+</body>
+</html>

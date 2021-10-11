@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="mx">
+    <input type="text" value="" id="text1" data-length="2">
+    <input type="text" value="" id="text2" data-length="5">
+    <input type="text" value="" id="text3" data-length="7">
+    <script>
+        let elem=document.getElementsByClassName("mx")
+
+        let elem1=document.getElementById('text1')
+        document.getElementById('text1').addEventListener('blur', function(){
+            let cor=elem1.dataset.length;
+            let now=elem1.value.length;
+            if(cor==now){
+                elem1.style.borderColor='green';
+            }else{
+                elem1.style.borderColor='red';
+            }
+        })
+        let elem2=document.getElementById('text2')
+        document.getElementById('text2').addEventListener('blur', function(){
+            let cor=elem2.dataset.length;
+            let now=elem2.value.length;
+            if(cor==now){
+                elem2.style.borderColor='green';
+            }else{
+                elem2.style.borderColor='red';
+            }
+        })
+        let elem3=document.getElementById('text3')
+        document.getElementById('text3').addEventListener('blur', function(){
+            let cor=elem3.dataset.length;
+            let now=elem3.value.length;
+            if(cor==now){
+                elem3.style.borderColor='green';
+            }else{
+                elem3.style.borderColor='red';
+            }
+        })
+
+    </script>
+</div>
+</body>
+</html>

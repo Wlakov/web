@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <div id="inp">
+        <input type="text" value="first" id="field1">
+        <input type="text" value="second" id="field2">
+        <input type="text" value="third" id="field3">
+        <p id="demo">some random text</p>
+    </div>
+    <script>
+        let i1 = document.getElementById("field1");
+        let i2 = document.getElementById("field2");
+        let i3 = document.getElementById("field3");
+
+        i1.addEventListener("click",alert1,false)
+        i2.addEventListener("click",alert2,false)
+        i3.addEventListener("click",alert3,false)
+        function alert1(){
+            alert(i1.value)
+            i1.removeEventListener("click",alert1,false)
+            i2.removeEventListener("click",alert2,false)
+            i3.removeEventListener("click",alert3,false)
+        }
+        function alert2(){
+            alert(i2.value)
+            i1.removeEventListener("click",alert1,false)
+            i2.removeEventListener("click",alert2,false)
+            i3.removeEventListener("click",alert3,false)
+        }
+        function alert3(){
+            alert(i3.value)
+            i1.removeEventListener("click",alert1,false)
+            i2.removeEventListener("click",alert2,false)
+            i3.removeEventListener("click",alert3,false)
+        }
+
+
+    </script>
+</div>
+</body>
+</html>
